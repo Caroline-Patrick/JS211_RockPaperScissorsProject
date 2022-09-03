@@ -17,13 +17,16 @@ const rockPaperScissors = (h1, h2) => {
     const hand1 = h1.toLowerCase().trim()
     const hand2 = h2.toLowerCase().trim()
 
-  if(hand1 === hand2) {
+  if(hand1 == hand2) {
     return "It's a tie!"
   }
-  else if(hand1 == 'rock' && hand2 =='paper' || hand1 == 'paper' && hand2 =='scissors'|| hand1 == scissors && hand2 == 'rock' ){
+  else if(hand1 == 'rock' && hand2 =='paper' || hand1 == 'paper' && hand2 =='scissors'|| hand1 == 'scissors' && hand2 == 'rock' ){
     return "Hand two wins!"
-  } else if (hand2 == 'rock' && hand1 =='paper' || hand2 == 'paper' && hand1 =='scissors'|| hand2 == scissors && hand1 == 'rock'  ) {
+  } else if (hand2 == 'rock' && hand1 =='paper' || hand2 == 'paper' && hand1 =='scissors'|| hand2 == 'scissors' && hand1 == 'rock'  ) {
     return "Hand one wins!"
+  }
+  else {
+    return "Error: Not able to determine winner based on user input"
   }
 
 
